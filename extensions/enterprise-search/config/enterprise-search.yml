@@ -7,6 +7,9 @@
 
 # Encryption keys to protect application secrets.
 secret_management.encryption_keys:
+  - 12f9b65bdef79be2c928a64c911b1d834564a87472d4375c53707e00770b2237
+  - 0a49dd9634f3d45d9ed2772b3fbc05491732a3f320a440aeedd89b55c103a459
+  - 704346d0f7884ca2e71b43769afbfce0dfffaec6f3441e7bff43367fa8fdd597
   # example:
   #- 680f94e568c90364bedf927b2f0f49609702d3eab9098688585a375b14274546
 

@@ -4,7 +4,7 @@
 #
 server.name: kibana
 server.host: 0.0.0.0
-elasticsearch.hosts: [ https://elasticsearch:9200 ]
+elasticsearch.hosts: [https://elasticsearch:9200]
 
 monitoring.ui.container.elasticsearch.enabled: true
 monitoring.ui.container.logstash.enabled: true
@@ -22,7 +22,7 @@ elasticsearch.password: ${KIBANA_SYSTEM_PASSWORD}
 ## Communications between Kibana and Elasticsearch
 ## see https://www.elastic.co/guide/en/kibana/current/configuring-tls.html#configuring-tls-kib-es
 #
-elasticsearch.ssl.certificateAuthorities: [ config/ca.crt ]
+elasticsearch.ssl.certificateAuthorities: [config/ca.crt]
 
 ## Communications between web browsers and Kibana
 ## see https://www.elastic.co/guide/en/kibana/current/configuring-tls.html#configuring-tls-browser-kib
@@ -47,13 +47,13 @@ server.ssl.key: config/kibana.key
 ## Fleet
 ## https://www.elastic.co/guide/en/kibana/current/fleet-settings-kb.html
 #
-xpack.fleet.agents.fleet_server.hosts: [ https://fleet-server:8220 ]
+xpack.fleet.agents.fleet_server.hosts: [https://fleet-server:8220]
 
 xpack.fleet.outputs:
   - id: fleet-default-output
     name: default
     type: elasticsearch
-    hosts: [ https://elasticsearch:9200 ]
+    hosts: [https://elasticsearch:9200]
     # Set to output of 'docker compose up tls'. Example:
     #ca_trusted_fingerprint: 846637d1bb82209640d31b79869a370c8e47c2dc15c7eafd4f3d615e51e3d503
     is_default: true
@@ -122,3 +122,5 @@ xpack.fleet.agentPolicies:
                 value: /usr/share/elastic-agent/apm-server.crt
               - name: tls_key
                 value: /usr/share/elastic-agent/apm-server.key
+
+enterpriseSearch.host: http://enterprise-search:3002
